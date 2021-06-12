@@ -1838,7 +1838,7 @@
 
 	stamina_damage = BULLET_DAMAGE_TIER_9
 	accuracy = HIT_ACCURACY_TIER_8
-	shell_speed = AMMO_SPEED_TIER_1 // Slightly faster
+	shell_speed = AMMO_SPEED_TIER_2 // Slightly faster
 
 /datum/ammo/energy/taser/on_hit_mob(mob/M, obj/item/projectile/P)
 	if(ishuman(M))

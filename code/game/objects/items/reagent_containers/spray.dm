@@ -116,7 +116,7 @@
 	icon_state = "pepperspray"
 	item_state = "pepperspray"
 	possible_transfer_amounts = null
-	volume = 40
+	volume = 80
 	safety = TRUE
 
 
