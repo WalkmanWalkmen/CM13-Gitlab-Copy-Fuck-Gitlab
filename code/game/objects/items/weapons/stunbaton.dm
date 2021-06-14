@@ -220,8 +220,8 @@
 	item_state = "prod"
 	force = 3
 	throwforce = 5
-	stunforce = 40
-	hitcost = 2500
+	stunforce = 35
+	hitcost = 2000
 	attack_verb = list("poked")
 	flags_equip_slot = NO_FLAGS
 	has_user_lock = FALSE
