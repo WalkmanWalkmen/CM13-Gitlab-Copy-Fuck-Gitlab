@@ -226,8 +226,8 @@
 	flags_equip_slot = NO_FLAGS
 	has_user_lock = FALSE
 
-/obj/item/weapon/melee/baton/cattleprod/New()
-	..()
-	bcell = null //cattleprod is crafted by putting wirecutters on wired rod, so it shouldnt spawn with cell
+/obj/item/weapon/melee/baton/cattleprod/Initialize()
+	. = ..()
+	QDEL_NULL(bcell) //cattleprod is crafted by putting wirecutters on wired rod, so it shouldnt spawn with cell
 	update_icon()
 	return
