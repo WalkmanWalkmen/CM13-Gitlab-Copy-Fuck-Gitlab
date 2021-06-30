@@ -12,7 +12,7 @@
 
 	attack_verb = list("beaten")
 	req_one_access = list(ACCESS_MARINE_BRIG, ACCESS_MARINE_ARMORY, ACCESS_MARINE_COMMANDER, ACCESS_WY_CORPORATE, ACCESS_WY_PMC_GREEN, ACCESS_CIVILIAN_BRIG)
-	var/stunforce = 50
+	var/stunforce = 75
 	var/status = 0		//whether the thing is on or not
 	var/obj/item/cell/bcell = null
 	var/hitcost = 1000	//oh god why do power cells carry so much charge? We probably need to make a distinction between "industrial" sized power cells for APCs and power cells for everything else.
@@ -220,8 +220,14 @@
 	item_state = "prod"
 	force = 3
 	throwforce = 5
-	stunforce = 0
-	hitcost = 2500
+	stunforce = 35
+	hitcost = 2000
 	attack_verb = list("poked")
 	flags_equip_slot = NO_FLAGS
 	has_user_lock = FALSE
+
+/obj/item/weapon/melee/baton/cattleprod/Initialize()
+	. = ..()
+	QDEL_NULL(bcell) //cattleprod is crafted by putting wirecutters on wired rod, so it shouldnt spawn with cell
+	update_icon()
+	return

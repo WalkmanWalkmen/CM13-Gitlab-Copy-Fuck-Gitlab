@@ -160,7 +160,7 @@
 		var/obj/item/weapon/melee/baton/cattleprod/P = new /obj/item/weapon/melee/baton/cattleprod
 
 		user.put_in_hands(P)
-		to_chat(user, SPAN_NOTICE("You fasten the wirecutters to the top of the rod with the cable, prongs outward."))
+		to_chat(user, SPAN_NOTICE("You fasten the wirecutters to the top of the rod with the cable, prongs outward. Insert a battery to ready the prod."))
 		qdel(I)
 		qdel(src)
 		update_icon(user)
